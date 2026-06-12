@@ -1,0 +1,28 @@
+programa{
+
+	inclua biblioteca Matematica --> mat
+	
+	funcao inicio(){
+
+		real custo_fabrica, custo_consumidor, valor_distribuidor, valor_impostos
+
+		escreva("Digite o custo de fábrica do carro (R$): ")
+		leia(custo_fabrica)
+    limpa()
+	
+  	valor_distribuidor = custo_fabrica * 0.28
+		
+		valor_impostos = custo_fabrica * 0.45
+		
+		custo_consumidor = custo_fabrica + valor_distribuidor + valor_impostos
+
+		custo_consumidor = mat.arredondar(custo_consumidor, 2)
+
+		escreva("\n------ DETALHAMENTO DE CUSTOS ------")
+		escreva("\nCusto de Fábrica: R$ ", custo_fabrica)
+		escreva("\nParcela do Distribuidor (28%): R$ ", mat.arredondar(valor_distribuidor, 2))
+		escreva("\nImpostos aplicados (45%): R$ ", mat.arredondar(valor_impostos, 2))
+		escreva("\n-------------------------------------")
+		escreva("\nCusto Final ao Consumidor: R$ ", custo_consumidor)
+	}
+}
