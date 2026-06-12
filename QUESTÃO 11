@@ -1,0 +1,23 @@
+programa{
+	funcao inicio(){
+		
+    inteiro A, B
+
+		escreva("Digite o valor de A: ")
+		leia(A)
+    limpa()
+		escreva("Digite o valor de B: ")
+		leia(B)
+    limpa()
+		escreva("\nValores digitados: A = ", A, ", B = ", B)
+
+		se (A % B == 0 ou B % A == 0)
+		{
+			escreva("\nSão Multiplos\n")
+		}
+		senao
+		{
+			escreva("\nNão sao Multiplos\n")
+		}
+	}
+}
