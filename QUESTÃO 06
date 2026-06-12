@@ -1,0 +1,19 @@
+programa{
+	funcao inicio(){
+		
+    inteiro total_segundos, horas, minutos, segundos, resto
+
+		escreva("Digite o tempo de duração do evento em segundos: ")
+		leia(total_segundos)
+
+		horas = total_segundos / 3600
+		
+		resto = total_segundos % 3600
+		
+		minutos = resto / 60
+		
+		segundos = resto % 60
+
+		escreva("\nO evento durou exatamente: ", horas, " hora, ", minutos, " minuto e ", segundos, " segundo.")
+	}
+}
