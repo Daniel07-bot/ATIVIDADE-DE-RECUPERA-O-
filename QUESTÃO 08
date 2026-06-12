@@ -1,0 +1,38 @@
+programa{
+	
+  inclua biblioteca Matematica --> mat
+	
+	funcao inicio(){
+
+		real a, b, c, d, e_coef, f, x, y
+
+		escreva("Digite o coeficiente a: ")
+		leia(a)
+    limpa()
+		escreva("Digite o coeficiente b: ")
+		leia(b)
+    limpa()
+		escreva("Digite o coeficiente c: ")
+		leia(c)
+    limpa()
+		escreva("Digite o coeficiente d: ")
+		leia(d)
+    limpa()
+		escreva("Digite o coeficiente e: ")
+		leia(e_coef)
+    limpa()
+		escreva("Digite o coeficiente f: ")
+		leia(f)
+    limpa()
+
+		x = ((c * e_coef) - (b * f)) / ((a * e_coef) - (b * d))
+		y = ((a * f) - (c * d)) / ((a * e_coef) - (b * d))
+
+		x = mat.arredondar(x, 2)
+		y = mat.arredondar(y, 2)
+
+		escreva("\n--- SOLUÇÃO DO SISTEMA ---")
+		escreva("\nO valor de X é: ", x)
+		escreva("\nO valor de Y é: ", y)
+	}
+}
