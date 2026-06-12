@@ -1,0 +1,55 @@
+programa{
+	
+  inclua biblioteca Matematica --> mat
+	
+	funcao inicio(){
+		
+    inteiro codigo, quantidade
+		
+    real preco_unitario = 0.0, valor_total
+
+		escreva("Digite o código do item pedido: ")
+		leia(codigo)
+		escreva("Digite a quantidade desejada: ")
+		leia(quantidade)
+
+		escolha (codigo)
+		{
+			caso 100:
+				preco_unitario = 1.20 
+				pare
+			caso 101:
+				preco_unitario = 1.30 
+				pare
+			caso 102:
+				preco_unitario = 1.50 
+				pare
+			caso 103:
+				preco_unitario = 1.20 
+				pare
+			caso 104:
+				preco_unitario = 1.30 
+				pare
+			caso 105:
+				preco_unitario = 1.00 
+				pare
+			caso contrario:
+				preco_unitario = -1.0 
+		}
+		se (preco_unitario == -1.0)
+		{
+			escreva("\nErro: Código de produto inválido!")
+		}
+		senao
+		{
+			valor_total = preco_unitario * quantidade
+			valor_total = mat.arredondar(valor_total, 2)
+
+			escreva("\n--- RESUMO DO PEDIDO ---")
+			escreva("\nCódigo do item: ", codigo)
+			escreva("\nQuantidade: ", quantidade)
+			escreva("\nValor Total a pagar: R$ ", valor_total)
+
+		}
+	}
+}
