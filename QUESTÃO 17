@@ -1,0 +1,27 @@
+programa { 
+  inclua biblioteca Matematica --> mat 
+  
+  funcao inicio() { 
+    real h, peso_ideal 
+    cadeia sexo 
+    
+    escreva("Digite a altura: ") 
+    leia(h) 
+    escreva("Digite o sexo (M/F): ") 
+    leia(sexo) 
+    
+    se (sexo == "M" ou sexo == "m") { 
+      peso_ideal = (72.7 * h) - 58 
+      peso_ideal = mat.arredondar(peso_ideal, 2) 
+      escreva("Peso ideal masculino: ", peso_ideal, " kg") 
+    } senao { 
+      se (sexo == "F" ou sexo == "f") { 
+        peso_ideal = (62.1 * h) - 44.7 
+        peso_ideal = mat.arredondar(peso_ideal, 2) 
+        escreva("Peso ideal feminino: ", peso_ideal, " kg") 
+      } senao { 
+        escreva("Sexo inválido!") 
+      } 
+    } 
+  } 
+}
