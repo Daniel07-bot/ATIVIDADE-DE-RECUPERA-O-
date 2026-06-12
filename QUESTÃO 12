@@ -1,0 +1,36 @@
+programa{
+	funcao inicio(){
+		inteiro idade
+
+		escreva("Digite a idade do nadador: ")
+		leia(idade)
+    limpa()
+
+		escreva("\nIdade inserida: ", idade, " anos")
+
+		se (idade >= 5 e idade <= 7)
+		{
+			escreva("\nCategoria: Infantil A\n")
+		}
+		senao se (idade >= 8 e idade <= 10)
+		{
+			escreva("\nCategoria: Infantil B\n")
+		}
+		senao se (idade >= 11 e idade <= 13)
+		{
+			escreva("\nCategoria: Juvenil A\n")
+		}
+		senao se (idade >= 14 e idade <= 17)
+		{
+			escreva("\nCategoria: Juvenil B\n")
+		}
+		senao se (idade >= 18)
+		{
+			escreva("\nCategoria: Adultos\n")
+		}
+		senao
+		{
+			escreva("\nCategoria: Idade inválida para classificação (abaixo de 5 anos)\n")
+		}
+	}
+}
