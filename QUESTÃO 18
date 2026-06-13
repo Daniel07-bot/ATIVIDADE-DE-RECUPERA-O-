@@ -1,0 +1,36 @@
+programa {
+  funcao inicio() {
+		real saldo_medio, valor_credito
+		inteiro faixa
+
+		escreva("Digite o saldo médio do cliente: ")
+		leia(saldo_medio)
+
+		se (saldo_medio >= 0 e saldo_medio <= 200) {
+			faixa = 1
+		} senao se (saldo_medio <= 400) {
+			faixa = 2
+		} senao se (saldo_medio <= 600) {
+			faixa = 3
+		} senao {
+			faixa = 4
+		}
+
+		escolha (faixa) {
+			caso 1:
+				valor_credito = 0.0
+				pare
+			caso 2:
+				valor_credito = saldo_medio * 0.20
+				pare
+			caso 3:
+				valor_credito = saldo_medio * 0.30
+				pare
+			caso 4:
+				valor_credito = saldo_medio * 0.40
+				pare
+		}
+		escreva("Saldo médio: R$ ", saldo_medio, "\n")
+		escreva("Valor do crédito: R$ ", valor_credito, "\n")
+	}
+}
