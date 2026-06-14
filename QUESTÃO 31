@@ -1,0 +1,29 @@
+programa{
+
+	inclua biblioteca Matematica --> mat
+	
+	funcao inicio(){
+    
+		real t1, t2, t3, t4, t5
+		real e3, e4, e5
+		
+		t1 = 1.0
+		t2 = 1.0 / 1.0
+		t3 = 1.0 / 2.0
+		t4 = 1.0 / 6.0
+		t5 = 1.0 / 24.0
+		
+		e3 = t1 + t2 + t3
+		e4 = e3 + t4
+		e5 = e4 + t5
+		
+		real e3_limpo = mat.arredondar(e3, 2) 
+		real e4_limpo = mat.arredondar(e4, 4) 
+		real e5_limpo = mat.arredondar(e5, 4) 
+
+		escreva("--- RESULTADOS DA SÉRIE E ---\n")
+		escreva("Valor de E com 3 termos: ", e3_limpo, "\n")
+		escreva("Valor de E com 4 termos: ", e4_limpo, "\n")
+		escreva("Valor de E com 5 termos: ", e5_limpo, "\n")
+	}
+}
