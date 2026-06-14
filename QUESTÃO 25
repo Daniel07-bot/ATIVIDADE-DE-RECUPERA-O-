@@ -1,0 +1,45 @@
+programa {
+  funcao inicio() {
+
+    inteiro i
+    real a, b, c, aux
+
+    escreva("Digite o código (1, 2 ou 3): ")
+    leia(i)
+    escreva("Digite o valor de A: ")
+    leia(a)
+    escreva("Digite o valor de B: ")
+    leia(b)
+    escreva("Digite o valor de C: ")
+    leia(c)
+
+    se (a > b) { 
+      aux = a
+      a = b
+      b = aux 
+    }
+        se (a > c) { 
+      aux = a
+      a = c
+      c = aux 
+    }
+        se (b > c) { 
+      aux = b
+      b = c
+      c = aux 
+    }
+    escolha(i) {
+      caso 1:
+        escreva("Ordem Crescente: ", a, " -> ", b, " -> ", c)
+        pare
+      caso 2:
+        escreva("Ordem Decrescente: ", c, " -> ", b, " -> ", a)
+        pare
+      caso 3:
+        escreva("Maior no meio: ", a, " -> ", c, " -> ", b)
+        pare
+      caso contrario:
+        escreva("Código 'i' inválido!")
+    }
+  }
+}
