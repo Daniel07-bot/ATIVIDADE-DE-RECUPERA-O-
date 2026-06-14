@@ -1,0 +1,61 @@
+programa {
+	funcao inicio(){
+
+		inteiro id
+		real n1, n2, n3, me, ma
+		cadeia conceito, status
+
+		escreva("Número de identificação do aluno: ")
+		leia(id)
+		
+		escreva("Digite a Nota 1: ")
+		leia(n1)
+    limpa()
+		escreva("Digite a Nota 2: ")
+		leia(n2)
+    limpa()
+		escreva("Digite a Nota 3: ")
+		leia(n3)
+		limpa()
+
+		escreva("Digite a média dos exercícios: ")
+		leia(me)
+		limpa()
+
+		ma = (n1 + (n2 * 2.0) + (n3 * 3.0) + me) / 7.0
+		
+		se (ma >= 9.0) 
+		{
+			conceito = "A"
+			status = "APROVADO"
+		}
+		senao se (ma >= 7.5) 
+		{
+			conceito = "B"
+			status = "APROVADO"
+		}
+		senao se (ma >= 6.0) 
+		{
+			conceito = "C"
+			status = "APROVADO"
+		}
+		senao se (ma >= 4.0) 
+		{
+			conceito = "D"
+			status = "REPROVADO"
+		}
+		senao 
+		{
+			conceito = "E"
+			status = "REPROVADO"
+		}
+		
+		escreva("\n--- RESULTADO FINAL ---\n")
+		escreva("Aluno ID: ", id, "\n")
+		escreva("Notas: ", n1, " | ", n2, " | ", n3, "\n")
+		escreva("Média Exercícios: ", me, "\n")
+		escreva("Média de Aproveitamento: ", ma, "\n")
+		escreva("Conceito: ", conceito, "\n")
+		escreva("Situação: ", status, "\n")
+	}
+}
