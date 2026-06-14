@@ -1,0 +1,36 @@
+programa {
+  funcao inicio() {
+    inteiro codigo, quantidade
+    real preco_unitario = 0.0, total
+
+    escreva("Digite o código do produto: ")
+    leia(codigo)
+    escreva("Digite a quantidade: ")
+    leia(quantidade)
+
+    escolha(codigo) {
+      caso 1001: 
+        preco_unitario = 5.32 
+        pare
+      caso 1324: 
+        preco_unitario = 6.45 
+        pare
+      caso 6548: 
+        preco_unitario = 2.37 
+        pare
+      caso 987: 
+        preco_unitario = 5.32 
+        pare
+      caso 7623: 
+        preco_unitario = 6.45 
+        pare
+      caso contrario: 
+        escreva("Código inválido!\n")
+    }
+
+    se (preco_unitario > 0) {
+      total = preco_unitario * quantidade
+      escreva("Preço total devido: R$ ", total)
+    }
+  }
+}
