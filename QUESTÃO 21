@@ -1,0 +1,25 @@
+programa {
+  funcao inicio() {
+    
+    cadeia codigo
+    inteiro quantidade
+    real preco = 0.0
+
+    escreva("Digite o código do produto (ABCD, XYPK, KLMP, QRST): ")
+    leia(codigo)
+    escreva("Digite a quantidade: ")
+    leia(quantidade)
+
+    escolha(codigo) {
+      caso "ABCD": preco = 5.30 pare
+      caso "XYPK": preco = 6.00 pare
+      caso "KLMP": preco = 3.20 pare
+      caso "QRST": preco = 2.50 pare
+      caso contrario: escreva("Código inválido!\n")
+    }
+
+    se (preco > 0) {
+      escreva("Preço total: R$ ", preco * quantidade)
+    }
+  }
+}
