@@ -1,0 +1,39 @@
+programa {
+  funcao inicio() {
+
+		inteiro h_inicio, m_inicio, h_fim, m_fim
+		inteiro min_inicio, min_fim, duracao_min, duracao_h, resto_min
+
+		escreva("--- INÍCIO DO JOGO ---\n")
+		escreva("Hora de início (0 a 23): ")
+		leia(h_inicio)
+		escreva("Minuto de início (0 a 59): ")
+		leia(m_inicio)
+		
+		escreva("\n--- FIM DO JOGO ---\n")
+		escreva("Hora de término (0 a 23): ")
+		leia(h_fim)
+		escreva("Minuto de término (0 a 59): ")
+		leia(m_fim)
+		
+		min_inicio = h_inicio * 60 + m_inicio
+		min_fim = h_fim * 60 + m_fim
+		
+		se (min_fim <= min_inicio) 
+		{
+			duracao_min = (24 * 60 - min_inicio) + min_fim
+		}
+		senao 
+		{
+			duracao_min = min_fim - min_inicio
+		}
+		
+		duracao_h = duracao_min / 60
+		resto_min = duracao_min % 60
+		
+		escreva("\n-----------------------\n")
+		escreva("Duração do jogo: ", duracao_h, " horas e ", resto_min, " minutos.\n")
+	}
+}
+  }
+}
