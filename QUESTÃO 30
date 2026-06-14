@@ -1,0 +1,27 @@
+programa{
+	funcao inicio(){
+	
+  	real indice
+
+		escreva("Digite o índice de poluição medido: ")
+		leia(indice)
+		
+		escreva("\n--- NOTIFICAÇÃO ---\n")
+		se (indice >= 0.3 e indice < 0.4) 
+		{
+			escreva("Indústrias do 1º grupo devem suspender atividades!\n")
+		}
+		senao se (indice >= 0.4 e indice < 0.5) 
+		{
+			escreva("Indústrias do 1º e 2º grupo devem suspender atividades!\n")
+		}
+		senao se (indice >= 0.5) 
+		{
+			escreva("TODOS os 3 grupos devem paralisar as atividades imediatamente!\n")
+		}
+		senao 
+		{
+			escreva("Índice dentro dos níveis aceitáveis (0,05 a 0,25).\n")
+		}
+	}
+}
