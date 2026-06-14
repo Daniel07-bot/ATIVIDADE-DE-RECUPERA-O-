@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    real n1, n2, n3, media
+    inteiro opcao
+
+    escreva("Digite a primeira nota: ")
+    leia(n1)
+    escreva("Digite a segunda nota: ")
+    leia(n2)
+    escreva("Digite a terceira nota: ")
+    leia(n3)
+    escreva("Escolha a média (1-Aritmética, 2-Ponderada 3,3,4, 3-Harmônica): ")
+    leia(opcao)
+
+    escolha(opcao) {
+      caso 1:
+        media = (n1 + n2 + n3) / 3
+        escreva("Média Aritmética: ", media)
+        pare
+      caso 2:
+        media = (n1*3 + n2*3 + n3*4) / 10
+        escreva("Média Ponderada: ", media)
+        pare
+      caso 3:
+        media = 3 / ((1/n1) + (1/n2) + (1/n3))
+        escreva("Média Harmônica: ", media)
+        pare
+      caso contrario:
+        escreva("Opção inválida!")
+    }
+  }
+}
