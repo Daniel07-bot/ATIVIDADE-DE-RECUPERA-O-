@@ -1,0 +1,18 @@
+programa {
+  funcao inicio() {
+    inteiro inicio_jogo, fim_jogo, duracao
+
+    escreva("Hora de início (0-23): ")
+    leia(inicio_jogo)
+    escreva("Hora de fim (0-23): ")
+    leia(fim_jogo)
+
+    se (fim_jogo > inicio_jogo) {
+      duracao = fim_jogo - inicio_jogo
+    } senao {
+      duracao = (24 - inicio_jogo) + fim_jogo
+    }
+
+    escreva("O jogo durou ", duracao, " hora.")
+  }
+}
