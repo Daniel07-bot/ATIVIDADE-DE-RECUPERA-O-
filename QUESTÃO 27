@@ -1,0 +1,31 @@
+programa{
+	funcao inicio(){
+
+		real ipi, valor1, valor2, valor_total
+		inteiro cod1, cod2, quant1, quant2
+
+		escreva("Digite a porcentagem do IPI: ")
+		leia(ipi)
+		
+		escreva("\n--- DADOS DA PEÇA 1 ---\n")
+		escreva("Código da peça 1: ")
+		leia(cod1)
+		escreva("Valor unitário da peça 1: ")
+		leia(valor1)
+		escreva("Quantidade da peça 1: ")
+		leia(quant1)
+		
+		escreva("\n--- DADOS DA PEÇA 2 ---\n")
+		escreva("Código da peça 2: ")
+		leia(cod2)
+		escreva("Valor unitário da peça 2: ")
+		leia(valor2)
+		escreva("Quantidade da peça 2: ")
+		leia(quant2)
+		
+		valor_total = (valor1 * quant1 + valor2 * quant2) * (ipi / 100.0 + 1.0)
+		
+		escreva("\n-----------------------\n")
+		escreva("Valor total a ser pago: R$ ", valor_total, "\n")
+	}
+}
